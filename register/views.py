@@ -12,6 +12,11 @@ from django.utils.encoding import force_bytes, force_text
 
 
 # Create your views here.
+
+def about(request):
+    return render(request, "register/about.html")
+
+    
 def home(request):
     return render(request, "register/index.html")
 

@@ -13,13 +13,44 @@
 
     
   </head>
+
+  <style>
+
+    .p3{
+
+      
+      font-family: "Lucida Handwriting", Cursive;
+      font-size: 550%;
+    }
+
+    .p4{
+
+        
+      font-family: "Lucida Handwriting", Cursive;
+      font-size: 550%;
+    }
+    
+  </style>
+
   <body>
+
+
+
+
+
     
 
     {% if user.is_authenticated %}
 
     <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="/">OSA</a>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="navbar-brand" href="/about">About <span class="sr-only">(current)</span></a>
+
+        </li>
+
+      </ul>
       <ul class="navbar-nav my-2 my-lg-0">
         <li class="nav-item active">
           <a class="navbar-brand" href="/signout">SignOut <span class="sr-only">(current)</span></a>
@@ -28,10 +59,20 @@
     </ul>
     </nav>
 
-    <div class="text-center">
 
-      <h3>Hello {{fname}} </h3>
-      <h4>You are logged in</h4>
+    <div
+    class="bg-image d-flex justify-content-center align-items-center"
+    style="
+      background-image: url('https://mdbcdn.b-cdn.net/img/new/fluid/nature/015.webp');
+      height: 100vh;
+    "
+    >
+    <h1 class="text-white p3">Welcome!</h1>
+    
+
+    <h3 style="color:white;" class="p4">-{{fname}} </h3>
+    
+
 
     </div>
 
@@ -39,10 +80,18 @@
 
     {% else %}
 
+    <!-- navbar-nav mr-auto  -->
 
     <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="/">OSA</a>
       <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="navbar-brand" href="/about">About <span class="sr-only">(current)</span></a>
+
+        </li>
+
+      </ul>
+      <ul class="navbar-nav my-2 my-lg-0">
         <li class="nav-item active">
           <a class="navbar-brand" href="/signup">SignUp <span class="sr-only">(current)</span></a>
           <a class="navbar-brand" href="/signin">SignIn <span class="sr-only">(current)</span></a>
@@ -58,14 +107,33 @@
     
     </div>
     {% endfor %}
-    
-    <div class="text-center">
 
-      <h1><b>Welcome!</b></h1>
+     
+    <div
+    class="bg-image d-flex justify-content-center align-items-center"
+    style="
+      background-image: url('https://mdbcdn.b-cdn.net/img/new/fluid/nature/015.webp');
+      height: 100vh;
+    "
+    >
+    
+    <h1 class="text-white p3">Welcome!</h1> 
+
+    
+
+
 
     </div>
 
+    
+    
+
+      
+
+ 
+
     {% endif %}
+
 
     
 
